@@ -5,17 +5,20 @@ An owner is not a prerequisite for everyone: consumers work on published contrac
 
 | Pattern | Owner task |
 |---|---|
-| pyproject.toml | HACK-001 |
-| uv.lock | HACK-001 |
-| package.json | HACK-001 |
-| package-lock.json | HACK-001 |
-| web/package.json | HACK-001 |
-| web/package-lock.json | HACK-001 |
-| app/main.py | HACK-001 |
-| web/src/App.tsx | HACK-001 |
-| app/schemas/ | HACK-002 |
-| web/DESIGN.md | HACK-002 |
-| .github/workflows/ | HACK-001 |
-| .uak/PROJECT.md | HACK-001 |
-
-Delete rows for technologies you don't use. `/uak-plan` creates HACK-001 (setup) and HACK-002 (contract).
+| package.json | HND-001 |
+| package-lock.json | HND-001 |
+| next.config.ts | HND-001 |
+| tsconfig.json | HND-001 |
+| drizzle.config.ts | HND-001 |
+| render.yaml | HND-001 |
+| Dockerfile | HND-001 |
+| .github/workflows/ | HND-001 |
+| .env.example | HND-001 |
+| src/lib/db/schema.ts | HND-002 |
+| src/lib/db/migrations/ | HND-002 |
+| src/lib/types/ | HND-002 |
+| DESIGN.md | HND-003 |
+| src/app/globals.css | HND-003 |
+| src/components/ui/ | HND-003 |
+| src/app/layout.tsx | HND-003 |
+| .uak/PROJECT.md | HND-001 |
