@@ -42,7 +42,7 @@ Autonomy: yes
 Auto-Merge: yes
 Review-Mode: claims
 Plan-Channel: claims
-Freeze-Epoch: 0
+Freeze-Epoch: 1794143547
 Lease-Seconds: 2700
 Review-Lease-Seconds: 14400
 Events-Per-Session: 100
