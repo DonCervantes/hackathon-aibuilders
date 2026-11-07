@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google"; // design-lint: ok · scaffold default, HND-003 (design lock) replaces the typefaces
 import "./globals.css";
 
 const geistSans = Geist({
