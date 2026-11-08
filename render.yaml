@@ -1,0 +1,36 @@
+# Render Blueprint: dashboard -> New -> Blueprint -> this repo; fill the sync: false values.
+# Both plans are free so nothing is charged without a human choosing a paid plan.
+# A free web service sleeps after 15 min idle (first request waits ~1 min): open the app before a live demo.
+# A free Postgres expires after 30 days: fine for the hackathon, not for production.
+databases:
+  - name: handle-db
+    plan: free
+    databaseName: handle
+    user: handle
+
+services:
+  - type: web
+    name: handle
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true   # every push to main redeploys
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: handle-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PEY_API_BASE_URL
+        value: https://api.pey.mx
+      - key: PEY_API_KEY
+        sync: false
+      - key: PEY_WEBHOOK_SECRET
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        sync: false
+      - key: APP_URL
+        sync: false
